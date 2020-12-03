@@ -40,18 +40,19 @@
             this.update = new System.Windows.Forms.Button();
             this.insert = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 9);
+            this.label1.Location = new System.Drawing.Point(145, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 31);
+            this.label1.Size = new System.Drawing.Size(489, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "RESTAURANT DETAILS ";
+            this.label1.Text = "INNROAD RESTAURANT DETAILS ";
             // 
             // label2
             // 
@@ -119,16 +120,17 @@
             // 
             // update
             // 
-            this.update.Location = new System.Drawing.Point(263, 311);
+            this.update.Location = new System.Drawing.Point(57, 113);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(75, 23);
             this.update.TabIndex = 6;
             this.update.Text = "UPADTE";
             this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // insert
             // 
-            this.insert.Location = new System.Drawing.Point(69, 310);
+            this.insert.Location = new System.Drawing.Point(57, 61);
             this.insert.Name = "insert";
             this.insert.Size = new System.Drawing.Size(75, 23);
             this.insert.TabIndex = 7;
@@ -138,28 +140,30 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(447, 309);
+            this.button3.Location = new System.Drawing.Point(57, 171);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
+            this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // dataGridView1
             // 
-            this.button4.Location = new System.Drawing.Point(677, 309);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 261);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(800, 187);
+            this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.insert);
             this.Controls.Add(this.update);
@@ -175,6 +179,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +199,7 @@
         private System.Windows.Forms.Button update;
         private System.Windows.Forms.Button insert;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
